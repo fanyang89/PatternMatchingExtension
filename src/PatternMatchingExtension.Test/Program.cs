@@ -11,7 +11,7 @@ namespace PatternMatchingExtension.Test
             "foo"
                 .Match<int>(x => Console.WriteLine($"int {x}"))
                 .Match<string>(x => Console.WriteLine($"string {x}"))
-                .Match<object>(x => Console.WriteLine($"object {x}"))
+                .Match<_>(x => Console.WriteLine($"object {x}"))
                 ;
 
             new { a = 1, b = 2 }
