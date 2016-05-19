@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatchingExtension", "PatternMatchingExtension\PatternMatchingExtension.csproj", "{C8FC75A1-A78C-4A8D-B810-BB124EAF373C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatchingExtension.Test", "PatternMatchingExtension.Test\PatternMatchingExtension.Test.csproj", "{88689D16-D629-4270-8984-9797408C4C76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8FC75A1-A78C-4A8D-B810-BB124EAF373C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8FC75A1-A78C-4A8D-B810-BB124EAF373C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8FC75A1-A78C-4A8D-B810-BB124EAF373C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8FC75A1-A78C-4A8D-B810-BB124EAF373C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88689D16-D629-4270-8984-9797408C4C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88689D16-D629-4270-8984-9797408C4C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88689D16-D629-4270-8984-9797408C4C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88689D16-D629-4270-8984-9797408C4C76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

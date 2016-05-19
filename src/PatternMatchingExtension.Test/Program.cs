@@ -1,11 +1,12 @@
-# PatternMatchingExtension
+﻿using System;
+using System.Collections.Generic;
 
-Pattern matching extension methods for C#6
-
-# Example
-
-```CSharp
-           "MatchExpression Test".Println();
+namespace PatternMatchingExtension.Test
+{
+    static class Program
+    {
+        static void Main(string[] args) {
+            "MatchExpression Test".Println();
 
             "foo"
                 .Match<int>(x => Console.WriteLine($"int {x}"))
@@ -33,4 +34,8 @@ Pattern matching extension methods for C#6
                   .ToFunc()
                   ;
             $"fib(10) = {fib(10)}".Println();
-```
+
+            Console.ReadKey();
+        }
+    }
+}
