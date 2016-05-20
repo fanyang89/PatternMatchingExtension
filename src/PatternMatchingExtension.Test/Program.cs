@@ -19,18 +19,18 @@ namespace PatternMatchingExtension.Test
                 .Match<int, int>((x1, x2) => Console.WriteLine($"<int, int> {x1} {x2}"))
                 ;
 
-            var len = new Function<int, IList<int>>()
-                .Match(list => list.IsEmpty(), (ctx, list) => 0)
-                .Match(list => true, (ctx, list) => list.Match((x, xs) => ctx.Invoke(xs) + 1))
+            var len = new Function<IList<int>, int>()
+                .Match(list => list.IsEmpty(), self => list => 0)
+                .Match(list => true, self => list => list.Match((x, xs) => self.Invoke(xs) + 1))
                 .ToFunc()
                 ;
             len(new List<int> { 1, 2, 3, 4, 5 }).Println();
-            
+
             var fib = new Function<int, int>()
-                  .Match(x => x == 0, (ctx, x) => 0)
-                  .Match(x => x == 1, (ctx, x) => 1)
-                  .Match(x => x > 1, (ctx, x) => ctx.Invoke(x - 1) + ctx.Invoke(x - 2))
-                  .Match(x => true, (ctx, x) => { throw new ArgumentOutOfRangeException(nameof(x)); })
+                  .Match(x => x == 0, self => x => 0)
+                  .Match(x => x == 1, self => x => 1)
+                  .Match(x => x > 1, self => x => self.Invoke(x - 1) + self.Invoke(x - 2))
+                  .Match(_ => true, self => _ => { throw new ArgumentOutOfRangeException(nameof(_)); })
                   .ToFunc()
                   ;
             $"fib(10) = {fib(10)}".Println();
